@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-cards',
@@ -14,16 +14,33 @@ export class CardsComponent implements OnInit {
     'Invention de l imprimerie',
     'Invention de la machine a vapeur',
     
-  ]
+  ];
+  cardsHand = ['Mort de Louis XIV',
+  'Invention de l imprimerie',
+  'Invention de la machine a vapeur',];
 
-  constructor() { }
+
+  
 
   ngOnInit(): void {
 
   }
 
   drop(event: CdkDragDrop<string[]>) {
+    
+    if (event.previousContainer === event.container) {
     moveItemInArray(this.cards, event.previousIndex, event.currentIndex);
+    }
+    else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
+
+  
 
 }
