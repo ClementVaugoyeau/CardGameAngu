@@ -7,6 +7,7 @@ import { CardsComponent } from './cards/cards.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {DragDropModule} from '@angular/cdk/drag-drop'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,11 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

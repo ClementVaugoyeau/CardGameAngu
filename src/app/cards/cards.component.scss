@@ -1,4 +1,7 @@
 
+.boardContainer{
+    display: flex;
+}
 
 .cardPlace{
     width: 1000px;
@@ -67,4 +70,84 @@
 
 .img-card {
     width: 100px;
+}
+
+.btn {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    display: block;
+    font-weight: lighter;
+    color: #333;
+    width: 150px;
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #ffd17b;
+    border: none;
+    outline: none;
+    outline-color: rgb(161, 160, 160);
+    
+    cursor: pointer;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 6px #efa424;
+    
+}
+
+.btn:hover {
+    box-shadow:  0px 2px #efa424;
+    top: 2px;
+    
+
+}
+
+.btn:active {
+    box-shadow:  0px 0px #efa424;
+  
+    top: 6px;
+}
+
+.btnPopUp {
+    
+    display: flex;
+    justify-content: center;
+    
+    margin-left: 25%;
+    margin-top: 30%;
+ 
+   
+   
+    width: 150px;
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    font-weight: lighter;
+    color: #333;
+    background: #ffd17b;
+    border: none;
+    outline: none;
+    outline-color: rgb(161, 160, 160);
+    box-shadow: 0px 6px #efa424;
+    
+    
+    cursor: pointer;
+    border-radius: 15px;
+    
+   
+    
+}
+
+.btnPopUp:hover {
+    
+    box-shadow:  0px 2px #efa424;
+    top: 2px;
+    
+
+}
+
+.btnPopUp:active {
+    box-shadow:  0px 0px #efa424;
+  
+    top: 6px;
 }

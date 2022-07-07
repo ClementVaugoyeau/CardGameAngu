@@ -1,17 +1,27 @@
 
 
 <div cdkDropListGroup>
-    
-    <div cdkDropList cdkDropListOrientation="horizontal"  class="cardPlace"  (cdkDropListDropped)="drop($event)">
-        <div class="card" *ngFor="let card of cards" cdkDrag>
-            <h3 class="title-card" >{{card}}</h3>
-            <img class="img-card" src="https://lepetitjournal.com/sites/default/files/styles/main_article/public/2017-09/hegire%202_0.jpg?itok=ls5EZ8XL">
+
+    <div class="boardContainer">
+        <div cdkDropList cdkDropListOrientation="horizontal"  [cdkDropListData]="cards" class="cardPlace"  (cdkDropListDropped)="drop($event)">
+            <div class="card" *ngFor="let item of cards" cdkDrag>
+                <h3 class="title-card" >{{item}}</h3>
+                <img class="img-card" src="https://lepetitjournal.com/sites/default/files/styles/main_article/public/2017-09/hegire%202_0.jpg?itok=ls5EZ8XL">
+            </div>
         </div>
+        <button class="btn"> Valider</button>
     </div>
 
-    <div cdkDropList cdkDropListOrientation="horizontal"  class="cardPlace"  (cdkDropListDropped)="drop($event)">
-       
+    <div class="boardContainer">
+        <div cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="cardsHand"  class="cardPlace"  (cdkDropListDropped)="drop($event)">
+            <div class="card" *ngFor="let item of cardsHand" cdkDrag>
+                <h3 class="title-card"  > </h3>
+                <img class="img-card" src="https://lepetitjournal.com/sites/default/files/styles/main_article/public/2017-09/hegire%202_0.jpg?itok=ls5EZ8XL">
+            </div>
         
+            
+        </div>
+    <button class="btn" (click)="generateCards()"> Piocher</button> 
     </div>
 </div>
   
